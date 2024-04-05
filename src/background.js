@@ -1,5 +1,5 @@
-const DESKTOP_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0";
-const MOBILE_USER_AGENT = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.36 EdgA/119.0.0.0"
+const DESKTOP_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.2210.91";
+const MOBILE_USER_AGENT = "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.43 Mobile Safari/537.36";
 
 browser.webRequest.onBeforeSendHeaders.addListener(
     function (details) {
@@ -21,7 +21,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
         return { requestHeaders: details.requestHeaders };
     },
-    { urls: ["*://*.bing.com/*"] },
+    { urls: ["*://*.bing.com/*", "*://*.microsoft.com/*"] }, // added microsoft.com URLs
     ["blocking", "requestHeaders"]
 );
 
