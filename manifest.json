@@ -7,10 +7,10 @@
   "version": "1.2.3",
   "browser_specific_settings": {
     "gecko_android": {
-      "strict_min_version": "117.0"
+      "strict_min_version": "124.0"
     }
   },
-  "homepage_url": "https://github.com/IKavanagh/BingChatInFirefox",
+  "homepage_url": "https://github.com/akac97/BingChatInFirefox",
   "icons": {
     "48": "icons/icon.png",
     "96": "icons/icon@2x.png"
